@@ -1,5 +1,7 @@
 'use strict';
 
+const faker = require('faker')
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Orders', 
@@ -13,6 +15,7 @@ module.exports = {
         payment_status: Math.floor(Math.random() * 1),
         createdAt: new Date(),
         updatedAt: new Date(),
+        UserId: 1
         })
     ), {});
   },
